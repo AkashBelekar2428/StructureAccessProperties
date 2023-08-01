@@ -12,6 +12,7 @@ class TVC: UITableViewCell {
     @IBOutlet weak var ageLbl:UILabel!
     @IBOutlet weak var cityLbl:UILabel!
     @IBOutlet weak var StateLbl:UILabel!
+    @IBOutlet weak var CountryLbl:UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

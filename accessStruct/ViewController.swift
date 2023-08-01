@@ -11,19 +11,21 @@ struct Person{
     var age :Int
     var city : String
     var state : String
+    var country : String
     
-    init(name: String, age: Int, city: String, state: String) {
+    init(name: String, age: Int, city: String, state: String, country: String) {
         self.name = name
         self.age = age
         self.city = city
         self.state = state
+        self.country = country
     }
     
 }
 class ViewController: UIViewController {
     @IBOutlet weak var personInfoTbl:UITableView!
 
-    var personIns = Person(name: "Mobifilia", age: 10, city: "Kolhapur", state: "Maharastra") //Member Initilizers swift automatically create for you. only for structure and enumrators
+    var personIns = Person(name: "Mobifilia", age: 10, city: "Kolhapur", state: "Maharastra",country: "India") //Member Initilizers swift automatically create for you. only for structure and enumrators
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -44,6 +46,8 @@ extension ViewController:UITableViewDelegate,UITableViewDataSource{
         cell.ageLbl.text = "Age:- \(String(personIns.age))"
         cell.cityLbl.text = "City:- \(personIns.city)"
         cell.StateLbl.text = "State:- \(personIns.state)"
+        cell.CountryLbl.text = "Country:- \(personIns.country)"
+        cell.selectionStyle = .none
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

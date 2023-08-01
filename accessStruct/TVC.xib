@@ -14,29 +14,35 @@
             <rect key="frame" x="0.0" y="0.0" width="250" height="154"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6er-hy-b6P">
-                    <rect key="frame" x="10" y="0.0" width="230" height="154"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6er-hy-b6P">
+                    <rect key="frame" x="10" y="5" width="230" height="144"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yrL-KL-dYi">
-                            <rect key="frame" x="0.0" y="0.0" width="230" height="31"/>
+                            <rect key="frame" x="0.0" y="0.0" width="230" height="22.333333333333332"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VZl-4p-4AS">
-                            <rect key="frame" x="0.0" y="41" width="230" height="31"/>
+                            <rect key="frame" x="0.0" y="30.333333333333336" width="230" height="22.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXE-X2-4Va">
-                            <rect key="frame" x="0.0" y="82" width="230" height="31"/>
+                            <rect key="frame" x="0.0" y="60.666666666666664" width="230" height="22.666666666666664"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="state" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yuS-jk-dzV">
-                            <rect key="frame" x="0.0" y="123" width="230" height="31"/>
+                            <rect key="frame" x="0.0" y="91.333333333333329" width="230" height="22.333333333333329"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Khv-Iq-53k" userLabel="Country Lbl">
+                            <rect key="frame" x="0.0" y="121.66666666666667" width="230" height="22.333333333333329"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -47,13 +53,14 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="6er-hy-b6P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="FOP-Tv-Cgr"/>
+                <constraint firstItem="6er-hy-b6P" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="FOP-Tv-Cgr"/>
                 <constraint firstItem="6er-hy-b6P" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="ht1-bQ-EDL"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="6er-hy-b6P" secondAttribute="trailing" constant="10" id="mt7-Fh-1h1"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6er-hy-b6P" secondAttribute="bottom" id="wOb-jg-8M9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="6er-hy-b6P" secondAttribute="bottom" constant="5" id="wOb-jg-8M9"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
+                <outlet property="CountryLbl" destination="Khv-Iq-53k" id="V0b-QP-sCh"/>
                 <outlet property="StateLbl" destination="yuS-jk-dzV" id="aej-0h-Xa5"/>
                 <outlet property="ageLbl" destination="VZl-4p-4AS" id="gBm-qX-u60"/>
                 <outlet property="cityLbl" destination="jXE-X2-4Va" id="Ev9-2w-tag"/>
